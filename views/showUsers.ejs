@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
+      .container {
+        margin: 50px;
+        text-align: center;
+      }
+      form {
+        font-size: 2rem;
+      }
+      .findlink {
+        margin: 70px;
+        font-size: 2.3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form-horizontal" action="/usersByName" method="POST">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="name">Name:</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Search By Name"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Find</button>
+          </div>
+        </div>
+      </form>
+      <hr />
+      <hr />
+      <hr />
+      <form class="form-horizontal" action="/usersByLoc" method="POST">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="loc">Location:</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="loc"
+              name="location"
+              placeholder="Search By Location"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Find</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
