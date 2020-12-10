@@ -2,18 +2,16 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const { MONGOURI } = require("./config");
 
 const app = express();
 
 app.set("view engine", "ejs");
-// mongoose.connect(
-//   "mongodb+srv://admin:@MADb018@cluster0.skjiz.mongodb.net/abhiDB",
-//   { useNewUrlParser: true, useUnifiedTopology: true }
-// );
-mongoose.connect("mongodb://localhost:27017/gogoDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(MONGOURI, { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect("mongodb://localhost:27017/gogoDB", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const userSchema = {
